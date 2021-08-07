@@ -1,0 +1,45 @@
+timer A00 list	#LED
+timer B06 list  #TX1
+timer A02 list  #TX11 & RX11
+timer B07 list  #RX1
+timer A03 list  #RX2 
+timer A01 list  #M1
+timer A07 list  #M2
+timer B08 list  #M3
+timer B02 list  #M4
+
+#############################
+# timer A00 list	#LED
+# AF1: TIM2 CH1		#Assign to Servo 1
+# AF2: TIM5 CH1
+
+# timer B06 list	#TX1		
+# AF2: TIM4 CH1		#Assign to Servo 2    
+
+# timer A02 list	#TX11 & RX11 T2??
+# AF1: TIM2 CH3		#assign to Servo 3 Temp
+# AF2: TIM5 CH3
+# AF3: TIM9 CH1
+
+# timer B07 list	#RX1
+# AF2: TIM4 CH2		#Assign to Servo 3
+
+# timer A03 list	#RX2
+# AF1: TIM2 CH4		
+# AF2: TIM5 CH4
+# AF3: TIM9 CH2
+
+# timer A01 list	#M1 Set to NONE
+# AF1: TIM2 CH2
+# AF2: TIM5 CH2
+
+# timer A07 list	#M2 For Motor 1
+# AF1: TIM1 CH1N	#Assign to Motor 1
+# AF2: TIM3 CH2
+
+# timer B08 list	#M3
+# AF2: TIM4 CH3
+# AF3: TIM10 CH1	#Assign to Motor 2		
+
+# timer B02 list  #M4
+#########################3###

@@ -1,0 +1,39 @@
+# List timers
+timer B04 list		# Beeper
+timer B00 list		# M1
+timer B01 list		# M2
+timer A03 list		# M3
+timer A02 list		# M4
+timer B06 list		# LED
+
+# Timer results
+# timer B04 list	# Beeper
+# AF2: TIM3 CH1
+
+# timer B00 list	# M1
+# AF1: TIM1 CH2N	# Tail Motor
+# AF2: TIM3 CH3
+
+# timer B01 list	# M2
+# AF1: TIM1 CH3N	#
+# AF2: TIM3 CH4		# Servo 1
+
+# timer A03 list	# M3
+# AF1: TIM2 CH4		#
+# AF2: TIM5 CH4		# Servo 2
+# AF3: TIM9 CH2		#
+
+# timer A02 list	# M4
+# AF1: TIM2 CH3		#
+# AF2: TIM5 CH3		# Servo 3
+# AF3: TIM9 CH1		#
+
+# timer B06 list	# LED - Main Motor
+# AF2: TIM4 CH1		#
+
+# Timer allocation
+timer B06 AF2		# Main motor
+timer B00 AF1		# Tail motor
+timer A02 AF2		# Servo 3 tmr5
+timer A03 AF2		# Servo 2 tmr5
+timer B01 AF2		# Servo 1 tmr3

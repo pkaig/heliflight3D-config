@@ -1,0 +1,81 @@
+timer A00 list
+timer A01 list
+timer A02 list		#Serial TX2
+timer A03 list		#Serial RX2
+timer A08 list		#LED Strip
+timer A09 list		#Serial TX1
+timer A10 list		#Serial RX1
+timer B00 list		#ADC Batt
+timer B01 list		#ADC Current
+timer B02 list		#Beeper
+timer B03 list		#Motor 5
+timer B04 list		#Motor 1
+timer B05 list		#Motor 2
+timer B06 list		#Motor 3
+timer B07 list		#Motor 4
+timer B08 list		#SCL
+timer B09 list		#SDA
+timer B10 list		#Motor 6
+
+# timer A00 list
+# AF1: TIM2 CH1
+# AF2: TIM5 CH1
+
+# timer A01 list
+# AF1: TIM2 CH2
+# AF2: TIM5 CH2
+
+# timer A02 list	#Serial TX2
+# AF1: TIM2 CH3
+# AF2: TIM5 CH3
+# AF3: TIM9 CH1
+
+# timer A03 list	#Serial RX2
+# AF1: TIM2 CH4
+# AF2: TIM5 CH4
+# AF3: TIM9 CH2
+
+# timer A08 list	#LED Strip
+# AF1: TIM1 CH1
+
+# timer A09 list	#Serial TX1
+# AF1: TIM1 CH2
+
+# timer A10 list	#Serial RX1
+# AF1: TIM1 CH3
+
+# timer B00 list
+# AF1: TIM1 CH2N
+# AF2: TIM3 CH3
+
+# timer B01 list
+# AF1: TIM1 CH3N
+# AF2: TIM3 CH4
+
+# timer B02 list	#Beeper
+
+# timer B03 list	#Motor 5
+# AF1: TIM2 CH2
+
+# timer B04 list	#Motor 1
+# AF2: TIM3 CH1
+
+# timer B05 list	#Motor 2
+# AF2: TIM3 CH2
+
+# timer B06 list	#Motor 3
+# AF2: TIM4 CH1
+
+# timer B07 list	#Motor 4
+# AF2: TIM4 CH2
+
+# timer B08 list	#SCL
+# AF2: TIM4 CH3
+# AF3: TIM10 CH1
+
+# timer B09 list	#SDA
+# AF2: TIM4 CH4
+# AF3: TIM11 CH1
+
+# timer B10 list	#Motor 6
+# AF1: TIM2 CH3

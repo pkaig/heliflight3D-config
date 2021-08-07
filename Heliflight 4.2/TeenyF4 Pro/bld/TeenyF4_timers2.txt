@@ -1,0 +1,43 @@
+timer A02 list
+timer A03 list
+timer A01 list
+timer B06 list
+timer A09 list
+timer A10 list
+timer B00 list
+timer B01 list
+timer B02 list
+
+# timer A02 list
+# AF1: TIM2 CH3
+# AF2: TIM5 CH3
+# AF3: TIM9 CH1
+
+# timer A03 list
+# AF1: TIM2 CH4
+# AF2: TIM5 CH4
+# AF3: TIM9 CH2
+
+# timer A01 list
+# AF1: TIM2 CH2
+# AF2: TIM5 CH2
+
+#Was LED now Motor 1
+# timer B06 list
+# AF2: TIM4 CH1
+
+# timer A09 list
+# AF1: TIM1 CH2
+
+# timer A10 list
+# AF1: TIM1 CH3
+
+# timer B00 list
+# AF1: TIM1 CH2N
+# AF2: TIM3 CH3
+
+# timer B01 list
+# AF1: TIM1 CH3N
+# AF2: TIM3 CH4
+
+# timer B02 list
