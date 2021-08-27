@@ -20,11 +20,11 @@ manufacturer_id AIRB
 
 # resources
 resource BEEPER 1 B04
-resource MOTOR 1 B06		#Main motor
-resource MOTOR 2 NONE
-resource SERVO 1 B01		
-resource SERVO 2 A03
-resource SERVO 3 A02
+resource MOTOR 1 B06		# Main motor - On LED_STRIP
+resource MOTOR 2 A02		# Tail Motor - On PWM4
+resource SERVO 1 B00		# Front - On PWM1
+resource SERVO 2 B01		# Left Rear - on PWM2
+resource SERVO 3 A03		# right Rear - on PWM3
 resource SERVO 4 B00
 resource SERVO 5 NONE
 resource SERVO 6 NONE
@@ -39,8 +39,8 @@ resource PWM 5 C08
 resource PWM 6 C09
 resource PWM 7 NONE
 resource PWM 8 NONE
-resource SONAR_TRIGGER 1 A01
-resource SONAR_ECHO 1 A08
+resource SONAR_TRIGGER 1 NONE
+resource SONAR_ECHO 1 NONE
 resource LED_STRIP 1 NONE
 resource SERIAL_TX 1 A09
 resource SERIAL_TX 2 NONE
@@ -98,7 +98,7 @@ resource SPI_MISO 3 C11
 resource SPI_MOSI 1 A07
 resource SPI_MOSI 2 B15
 resource SPI_MOSI 3 C12
-resource ESCSERIAL 1 NONE
+resource ESCSERIAL 1 B08
 resource ADC_BATT 1 C02
 resource ADC_RSSI 1 A00
 resource ADC_CURR 1 C01
@@ -552,7 +552,7 @@ set rc_smoothing_debug_axis = ROLL
 set rc_smoothing_input_type = BIQUAD
 set rc_smoothing_derivative_type = AUTO
 set rc_smoothing_auto_smoothness = 10
-set max_aux_channels = 4
+set max_aux_channels = 6
 set serialrx_provider = SBUS
 set serialrx_inverted = OFF
 set spektrum_sat_bind = 0
@@ -598,8 +598,8 @@ set failsafe_throttle_low_delay = 100
 set failsafe_procedure = DROP
 set failsafe_recovery_delay = 20
 set failsafe_stick_threshold = 30
-set align_board_roll = 0
-set align_board_pitch = 0
+set align_board_roll = 180
+set align_board_pitch = 180
 set align_board_yaw = 90
 set bat_capacity = 0
 set vbat_max_cell_voltage = 430
@@ -631,7 +631,7 @@ set beeper_od = OFF
 set beeper_frequency = 0
 set beeper_dshot_beacon_tone = 1
 set gov_mode = STANDARD
-set gov_max_headspeed = 6500					#Gov Max 6500RPM
+set gov_max_headspeed = 4500					#Gov Max 6500RPM
 set gov_gear_ratio = 8000					    #64tmain 8t motor = 8 to 1 gear ratio
 set gov_p_gain = 50
 set gov_i_gain = 15
@@ -776,18 +776,18 @@ set gyro_1_bustype = SPI
 set gyro_1_spibus = 1
 set gyro_1_i2cBus = 0
 set gyro_1_i2c_address = 0
-set gyro_1_sensor_align = CW270
+set gyro_1_sensor_align = CW0
 set gyro_1_align_roll = 0
 set gyro_1_align_pitch = 0
-set gyro_1_align_yaw = 2700
+set gyro_1_align_yaw = 0
 set gyro_2_bustype = SPI
 set gyro_2_spibus = 1
 set gyro_2_i2cBus = 0
 set gyro_2_i2c_address = 0
-set gyro_2_sensor_align = CW0
+set gyro_2_sensor_align = CW90
 set gyro_2_align_roll = 0
 set gyro_2_align_pitch = 0
-set gyro_2_align_yaw = 0
+set gyro_2_align_yaw = 900
 set i2c1_pullup = OFF
 set i2c1_overclock = ON
 set i2c2_pullup = OFF
@@ -807,7 +807,7 @@ set stats = OFF
 set stats_total_flights = 0
 set stats_total_time_s = 0
 set stats_total_dist_m = 0
-set name = Heliflight-3D
+set name = TinyF4
 set position_alt_source = DEFAULT
 set box_user_1_name = -
 set box_user_2_name = -
@@ -874,9 +874,10 @@ set yaw_collective_ff_gain = 250
 set yaw_collective_ff_impulse_gain = 150
 set yaw_cyclic_ff_gain = 150
 set yaw_base_thrust = 100
+set rescue_collective = 200			# How strong the Heli will collective up during rescue mode
+set rescue_collective_boost = 50	# Boost collective during rescue	
+set rescue_delay = 20				# =2 seconds wait time before roll to upright						   
 set error_decay_rate = 7
-set rescue_collective = 50   #365						# How strong the Heli will collective up during rescue mode
-set rescue_delay = 10									# =2.5 seconds wait time before roll to upright					 
 set elevator_filter_gain = 0
 set elevator_filter_window_time = 75
 set elevator_filter_window_size = 30
